@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script lang="Javascript">
+    function crip() {
+        var p, r
+        r = '';
+        p = document.frmDados.txtp.value;
+
+        for (var i = 0; i < p.length; i++) {
+            
+            var q = p.charCodeAt(i) + 5
+ 
+            r += String.fromCharCode(q)
+            
+        }
+        document.write(r); 
+    }
+
+    function des() {
+        var p, r
+        p = document.frmDados.txtp.value;
+        r = '';
+
+        for (var i = 0; i < p.length; i++) {
+            
+            var q = p.charCodeAt(i) - 5
+ 
+            r += String.fromCharCode(q)
+ 
+            
+            
+        }
+        document.write(r);
+    }
+       
+</script>
+
+</head>
+<body>
+    <form name="frmDados">
+        Escreva uma palavra: <br><input type="text" name="txtp" value=""><br>
+        </form>
+        <input type="button" value="Criptografar" onclick="crip();">
+        <input type="button" value="Descriptografar" onclick="des();">
+</body>
+</html>
